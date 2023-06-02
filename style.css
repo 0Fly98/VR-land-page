@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  background: #111117;
+  color: #fff;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  width: 15rem;
+  aspect-ratio: 1/10;
+  filter: blur(50px);
+  background: #100856;
+}
+
+body::before {
+  top: -5rem;
+  left: -5rem;
+}
+
+body::after {
+  bottom: -5rem;
+  right: -5rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 1rem;
+  padding-inline: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+header img {
+  width: 5rem;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  border-radius: 100vw;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
+}
+
+header nav a:hover,
+.active {
+  background: #2231a2;
+}
+
+.background {
+  width: 100%;
+}
+
